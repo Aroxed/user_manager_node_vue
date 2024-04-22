@@ -14,6 +14,11 @@ const store = createStore({
             },
         };
     },
+    getters: {
+        authenticated(state) {
+            return state.auth.isAuthenticated;
+        }
+    },
     mutations: {
         setAuth(state, { isAuthenticated, token }) {
             state.auth.isAuthenticated = isAuthenticated;

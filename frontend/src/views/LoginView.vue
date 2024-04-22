@@ -32,6 +32,8 @@ export default {
 
       if (!success) {
         this.error = "Invalid email or password";
+      } else {
+        this.$router.push('/')
       }
     },
   },

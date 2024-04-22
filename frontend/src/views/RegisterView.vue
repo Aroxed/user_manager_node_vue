@@ -32,6 +32,8 @@ export default {
 
       if (!success) {
         this.error = "Unable to register with provided credentials";
+      } else {
+        this.$router.push('login')
       }
     },
   },

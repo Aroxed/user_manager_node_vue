@@ -26,13 +26,14 @@
 <script>
 export default {
   computed: {
-    authenticated() { console.log(this)
-      return this.$store.state.authenticated;
+    authenticated() { console.log(this.$store.getters.authenticated)
+      return this.$store.getters.authenticated;
     },
   },
   methods: {
     logout() {
       this.$store.dispatch("logout");
+      this.$router.push('login')
     },
   },
 };
